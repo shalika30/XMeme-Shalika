@@ -31,5 +31,40 @@ After this we install the dependecies that are:
     npm install meanie-mongoose-to-json
     npm install mongoose
     npm install request`
+
+## Serving the App : 
+`npm run dev`
+
+## Flows
+1. Users will post Memes by providing these inputs
+   -- Name of the person posting the meme
+   --Caption for the Meme
+   --URL of the Meme image
+
+2. Users will view the latest 100 memes posted 
+  -- If they post a new meme, it will get listed. Note that these submitted memes will be shown one below the other.
+  -- Each meme should display the name of the meme maker, the caption for the meme and the image pulled from the meme URL.
+  
+##  Mandatory Requirements
+1. The backend shall be capable of receiving the posted meme inputs from the frontend and store them in a database.
+2. The backend shall be capable of fetching the list of memes from the database and send them to the frontend.
+3. The interaction between the frontend and backend shall be based on a REST API with support for the below 3 endpoints.
+4. Endpoint to send a meme to the backend
+
+  -- HTTP Method - POST
+
+  -- Endpoint - /memes
+
+  --Json Body contains these inputs - name, url, caption
+
+  --The backend should allocate a unique id for the meme and return it as a json response.
+
+  --Example request and sample response
+
+
+
+    
+   
+    
     
     
