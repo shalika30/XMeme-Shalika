@@ -93,11 +93,14 @@ If a meme with that Id doesn’t exist, a 404 HTTP response code should be retur
 Example request and sample response
 `curl --location --request GET 'http://localhost:8081/memes/<id>'`
      
-    
+The database shall be designed to store and retrieve the meme content.
 
+The Frontend shall have a form at the top which can be used by users to post memes with these fields - Name of the meme creator, Caption for the meme and URL of the meme image. It shall send these inputs to the backend.
 
-    
-   
-    
+The Frontend shall list the latest 100 memes posted, either in the lower section of the page (below the form) or on a separate page. It shall fetch these details from the backend.
+
+Each meme shall list these three fields one below the other - Name of the meme creator, the caption for the meme, the image fetched from the meme URL.
+
+Display memes in the reverse chronological order i.e. last created one first.
     
     
