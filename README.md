@@ -1,5 +1,8 @@
 # XMeme
 
+# App Live on
+https://shalika-xmeme.herokuapp.com/
+
 ## Project Description
 This app is built for designing and deploying a simple webpage where users can post and see memes.
 
@@ -45,7 +48,7 @@ After this we install the dependecies that are:
   -- If they post a new meme, it will get listed. Note that these submitted memes will be shown one below the other.
   -- Each meme should display the name of the meme maker, the caption for the meme and the image pulled from the meme URL.
   
-##  Mandatory Requirements
+##  Project Overview
 1. The backend shall be capable of receiving the posted meme inputs from the frontend and store them in a database.
 2. The backend shall be capable of fetching the list of memes from the database and send them to the frontend.
 3. The interaction between the frontend and backend shall be based on a REST API with support for the below 3 endpoints.
