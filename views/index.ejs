@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>XMeme</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="crio">
+        <div class="title">
+            <img src="https://i.imgflip.com/1043ft.jpg"
+              height="200" width="200">
+              <h1 class="form-data"><u style= "text-shadow: 2px 2px  rgb(173, 30, 106);">Meme Stream</u></h1>
+        </div>
+
+        <div class="form-data">
+            <% if (typeof err!= 'undefined') { %>
+                <h1> <%= err %> </h1>
+                <br>
+            <% } %>
+        
+            <form action='/' method="POST">
+                <h1 style="color: rgb(126, 3, 69);">Submit the Details</h1><br>
+                <strong style="color: rgb(252, 0, 134);">Meme Owner</strong><br>
+                <input type="text" name="name" placeholder="Enter Your Full Name"><br>
+                <strong style="color: rgb(252, 0, 134);">Caption</strong><br>
+                <input type="text" name="caption" placeholder="Be Creative with the caption"><br>
+                 <strong style="color: rgb(255, 2, 137);">Meme URL</strong><br>
+                 <input type="url" name="url" placeholder="Enetr URL of your meme here">
+                 <input type="submit" class="button" value="Submit Meme">
+            </form>
+        </div>
+        <div class="fixed">
+            <h1 style="color: indigo;">Feel free to connect :</h1>
+            <br>
+            <a href="https://www.linkedin.com/in/shalika-sinha-77b827156/"><h2>Linkedin</h2></a>
+        </div>
+
+        <div class="ex1">
+            <% if (typeof data != 'undefined') { %>
+            <% for (var i =0; i <data.length;  i++ ) { %>
+                <h2 style="color: rgb(148, 5, 81);">Meme Owner :  <%= JSON.stringify(data[i].name) %> </h2> <br> 
+                <h2 style="color: rgba(206, 15, 117, 0.897);"> Caption : <%= JSON.stringify(data[i].caption)%> </h2> <br>
+                <img src="<%= data[i].url %>" alt="Not Supported" 
+                      onerror=this.src="https://png.pngtree.com/png-vector/20200313/ourmid/pngtree-page-not-found-error-404-concept-with-people-trying-to-fix-png-image_2157908.jpg" width="500" height="500">
+                <br><br>
+                <% } %>
+            <% } %>
+        </div>
+    
+    </div>
+</body>
+</html>
